@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.gondi.xyz/graphql
+docs: https://github.com/gondixyz/gondi-js
+summary:
+  types: [siwe, apiKey]
+  api_key_in: [header]
+  notes: >-
+    Gondi's off-chain GraphQL API authenticates users with Sign-In With Ethereum
+    (EIP-4361) sessions and issues programmatic API keys. There are no OAuth2
+    scopes; authorization to move value is enforced on-chain via wallet
+    signatures, not server-side scopes.
+schemes:
+  - name: SignInWithEthereum
+    type: siwe
+    standard: EIP-4361
+    flow: >-
+      Call the generateSignInNonce mutation to obtain a nonce, construct and sign
+      the SIWE message with the connected wallet, then call signInWithEthereum
+      with the signature to establish an authenticated session.
+    operations: [generateSignInNonce, signInWithEthereum]
+    sources: [graphql/gondi-schema.graphql]
+  - name: ApiKey
+    type: apiKey
+    in: header
+    minted_by: createApiKey
+    flow: >-
+      An authenticated user mints a programmatic API key via the createApiKey
+      mutation for server-to-server access to the GraphQL API.
+    operations: [createApiKey]
+    sources: [graphql/gondi-schema.graphql]
+signing:
+  model: non-custodial
+  notes: >-
+    Loan offers, collection offers, and renegotiation offers are signed
+    client-side with the user's wallet (generate*OfferToBeSigned returns the
+    payload to sign; saveSigned* persists the signature). The API never holds
+    keys or moves funds without a wallet signature.

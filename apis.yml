@@ -1,8 +1,18 @@
 aid: gondi
 name: Gondi
-description: 'Gondi is a company surfaced as a portfolio company of pantera-capital and added to the API
-  Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Gondi is a decentralized, non-custodial, peer-to-peer protocol for trading and
+  financing NFTs, deployed on Ethereum mainnet and HypeEVM. NFT owners borrow WETH,
+  HYPE, or USDC against ERC-721 / ERC-1155 collateral with pro-rata interest, no
+  oracles, and no forced liquidations, while lenders compete to refinance loans to
+  better terms (full, tranche, and trim-the-top refinancing). Beyond the on-chain
+  smart contracts, Gondi operates an off-chain GraphQL API at api.gondi.xyz that
+  powers the dApp and the official gondi-js (TypeScript) and Python SDKs: it is the
+  order/offer book and indexer for generating, signing, saving, listing, hiding, and
+  renegotiating loan offers, browsing collections, NFTs, listings, orders, and loans,
+  and managing users, linked wallets, notifications, and API keys. Authentication is
+  Sign-In With Ethereum (EIP-4361) plus programmatic API keys. Gondi is backed by
+  Pantera Capital.
 url: https://raw.githubusercontent.com/api-evangelist/gondi/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +20,55 @@ x-backed-by:
 - pantera-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://cdn.gondi.xyz/site/og/og-image-gondi-v4.png
 tags:
 - Company
 - Crypto
-apis: []
+- NFT
+- DeFi
+- Lending
+- NFT Finance
+- GraphQL
+- Web3
+apis:
+- aid: gondi:gondi-graphql
+  name: Gondi GraphQL API
+  description: >-
+    The off-chain Gondi GraphQL API (api.gondi.xyz/graphql) is the order/offer book
+    and indexing layer behind the Gondi NFT lending protocol. It exposes 76 queries
+    and 48 mutations across 325 types: Sign-In With Ethereum auth, generate/sign/save
+    loan offers (single-NFT and collection-wide), refinancing and renegotiation,
+    trading orders, and discovery over collections, NFTs, loans, listings, and orders.
+    Captured by live introspection 2026-07-19.
+  humanURL: https://docs.gondi.xyz/
+  baseURL: https://api.gondi.xyz/graphql
+  tags:
+  - NFT Lending
+  - GraphQL
+  - DeFi
+  - Web3
+  properties:
+  - type: GraphQL
+    url: graphql/gondi-graphql.md
+  - type: Documentation
+    url: https://docs.gondi.xyz/
+  - type: Authentication
+    url: authentication/gondi-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +77,58 @@ maintainers:
 common:
 - type: Website
   url: https://www.gondi.xyz/
+- type: Documentation
+  url: https://docs.gondi.xyz/
+- type: APIReference
+  url: https://gondixyz.github.io/gondi-js/
+- type: GettingStarted
+  url: https://docs.gondi.xyz/learn/how-to-make-a-loan-offer
+- type: GitHubOrganization
+  url: https://github.com/gondixyz
+- type: Blog
+  url: https://www.gondi.xyz/blog
+- type: Support
+  url: https://discord.gg/gondi
+- type: Pricing
+  url: https://docs.gondi.xyz/gondi-v3/protocol-fees
+- type: SignUp
+  url: https://www.gondi.xyz/
+- type: TermsOfService
+  url: https://www.gondi.xyz/terms
+- type: PrivacyPolicy
+  url: https://www.gondi.xyz/privacy
+- type: GraphQL
+  url: graphql/gondi-graphql.md
+- type: Packages
+  url: packages/gondi-packages.yml
+- type: SDKs
+  url: packages/gondi-packages.yml
+- type: LLMsTxt
+  url: llms/gondi-llms.txt
+- type: MCPServer
+  url: mcp/gondi-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/gondi-authentication.yml
+- type: Conventions
+  url: conventions/gondi-conventions.yml
+- type: Conformance
+  url: conformance/gondi-conformance.yml
+- type: Lifecycle
+  url: lifecycle/gondi-lifecycle.yml
+- type: ChangeLog
+  url: changelog/gondi-changelog.yml
+- type: DataModel
+  url: data-model/gondi-data-model.yml
+- type: DomainSecurity
+  url: security/gondi-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/gondi-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.gondi.xyz/vulnerability-disclosure
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

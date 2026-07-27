@@ -1,0 +1,64 @@
+# Gondi V3 -  NFT Lending Protocol
+
+## Gondi V3.1 -  NFT Liquidity Protocol
+
+- [Introducing GONDI](https://docs.gondi.xyz/gondi-v3/introducing-gondi.md)
+- [Buy & Sell on GONDI](https://docs.gondi.xyz/gondi-v3/buy-and-sell-on-gondi.md)
+- [Off-Market Listings](https://docs.gondi.xyz/gondi-v3/off-market-listings.md)
+- [Trades](https://docs.gondi.xyz/gondi-v3/trades.md)
+- [Loan Basics](https://docs.gondi.xyz/gondi-v3/loan-basics.md)
+- [Loan Offers](https://docs.gondi.xyz/gondi-v3/loan-offers.md)
+- [Refinancing](https://docs.gondi.xyz/gondi-v3/refinancing.md)
+- [Renegotiations](https://docs.gondi.xyz/gondi-v3/renegotiations.md)
+- [Sell & Repay](https://docs.gondi.xyz/gondi-v3/sell-and-repay.md)
+- [Purchase Bundler](https://docs.gondi.xyz/gondi-v3/purchase-bundler.md)
+- [Liquidations, Buyouts & Auctions](https://docs.gondi.xyz/gondi-v3/liquidations-buyouts-and-auctions.md)
+- [Vaults & Stash](https://docs.gondi.xyz/gondi-v3/vaults-and-stash.md)
+- [Protocol Contracts](https://docs.gondi.xyz/gondi-v3/protocol-contracts.md)
+- [ERC-721C Whitelisting](https://docs.gondi.xyz/gondi-v3/erc-721c-whitelisting.md)
+- [Protocol Fees](https://docs.gondi.xyz/gondi-v3/protocol-fees.md)
+- [Whitelisted Collections](https://docs.gondi.xyz/gondi-v3/whitelisted-collections.md): Last Update: February 26, 2026
+- [Security & Audits](https://docs.gondi.xyz/gondi-v3/security-and-audits.md)
+- [Glossary](https://docs.gondi.xyz/gondi-v3/glossary.md): This glossary defines key terms used in GONDI's dApp.
+- [Protocol Disclosures](https://docs.gondi.xyz/gondi-v3/protocol-disclosures.md)
+- [Official Links](https://docs.gondi.xyz/connect/official-links.md)
+- [How to Make a Loan Offer](https://docs.gondi.xyz/learn/how-to-make-a-loan-offer.md): A loan offer is a proposal extended by a lender outlining loan terms, including principal, APR, due date, and optional origination fee. Learn how to submit a loan offer on GONDI V3.
+- [Standard Loan Offers](https://docs.gondi.xyz/learn/how-to-make-a-loan-offer/standard-loan-offers.md): Learn how to submit a standard loan offer as a lender on GONDI V3.
+- [Collection Loan Offers](https://docs.gondi.xyz/learn/how-to-make-a-loan-offer/collection-loan-offers.md): Learn how to submit collection-wide loan offers as a lender on GONDI V3.
+- [How to Refinance a Loan](https://docs.gondi.xyz/learn/how-to-refinance-a-loan.md): A guide to refinancing outstanding loans on GONDI.
+- [Full Loan Refinancing](https://docs.gondi.xyz/learn/how-to-refinance-a-loan/full-loan-refinancing.md): Full loan refinancing allows lenders to refinance an entire loan by improving the APR. Here's a guide on how to fully refinance single loans on GONDI.
+- [Partial (Tranche) Refinancing](https://docs.gondi.xyz/learn/how-to-refinance-a-loan/partial-tranche-refinancing.md): Partial refinancing allows lenders to take over a portion of a loan by offering a better APR. Here's how to partially refinance loans on GONDI.
+- [Trim the Top Refinancing](https://docs.gondi.xyz/learn/how-to-refinance-a-loan/trim-the-top-refinancing.md): Trim the Top allows lenders to set risk parameters for a specific collection, streamlining the process of refinancing multiple loans and tranches simultaneously. Here's how to use it:
+- [How to Renegotiate a Loan](https://docs.gondi.xyz/learn/how-to-renegotiate-a-loan.md): This guide walks you through the steps for initiating a loan renegotiation as a lender on GONDI V3.
+- [GONDI V2](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2.md)
+- [Introducing Gondi V2](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/introducing-gondi-v2.md)
+- [Loan Basics](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/loan-basics.md)
+- [Loan Offers](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/loan-offers.md)
+- [Refinancing](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/refinancing.md)
+- [Partial (Tranche) Refinancing](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/partial-tranche-refinancing.md)
+- [Repayment](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/repayment.md)
+- [Renegotiations](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/renegotiations.md)
+- [Defaults & Auctions](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/defaults-and-auctions.md)
+- [Protocol Contracts](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/protocol-contracts.md)
+- [Protocol Fees](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/protocol-fees.md)
+- [FAQ V2](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v2/faq-v2.md)
+- [GONDI V1](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1.md): Launched in July 2023, GONDI V1 introduced disruptive loan mechanics such as instant refinancing and pro-rata interest. These innovations created a more competitive and capital-efficient market.
+- [Gondi V1 Loans](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/gondi-v1-loans.md)
+- [Instant & Partial Refinancing](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/instant-and-partial-refinancing.md)
+- [Repayments & Renegotiations](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/repayments-and-renegotiations.md)
+- [Defaults & Liquidations](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/defaults-and-liquidations.md)
+- [Loan Examples](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/loan-examples.md)
+- [FAQ V1](https://docs.gondi.xyz/gondi-v1-and-v2/gondi-v1/faq-v1.md)
+- [Content with Pools](https://docs.gondi.xyz/content-with-pools.md)
+- [Loan Basics w/pools](https://docs.gondi.xyz/content-with-pools/loan-basics-w-pools.md)
+- [Introducing GONDI w/pools](https://docs.gondi.xyz/content-with-pools/introducing-gondi-w-pools.md)
+- [Loan Offers w/pools](https://docs.gondi.xyz/content-with-pools/loan-offers-w-pools.md)
+- [GONDI Pools](https://docs.gondi.xyz/content-with-pools/gondi-pools.md)
+- [Offer Handler](https://docs.gondi.xyz/content-with-pools/gondi-pools/offer-handler.md): The Parameter Setter contract for each GONDI Pool sets the parameters for valid loan offers and makes the offers.
+- [Base Rate Contract](https://docs.gondi.xyz/content-with-pools/gondi-pools/base-rate-contract.md)
+- [Supply, Swaps, & Withdrawals](https://docs.gondi.xyz/content-with-pools/gondi-pools/supply-swaps-and-withdrawals.md)
+- [Parameters for Offers](https://docs.gondi.xyz/content-with-pools/gondi-pools/parameters-for-offers.md): Learn how GONDI Pools calculate how much principal they offer.
+- [Oracles](https://docs.gondi.xyz/content-with-pools/gondi-pools/oracles.md)
+- [Liquidations, Buyouts & Auctions w/pools](https://docs.gondi.xyz/content-with-pools/liquidations-buyouts-and-auctions-w-pools.md)
+- [Protocol Disclosures w/pools](https://docs.gondi.xyz/content-with-pools/protocol-disclosures-w-pools.md)
+- [FAQ](https://docs.gondi.xyz/faq.md)

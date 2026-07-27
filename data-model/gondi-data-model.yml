@@ -1,0 +1,76 @@
+generated: '2026-07-19'
+method: derived
+source: graphql/gondi-schema.graphql
+notes: >-
+  Entity graph derived from the Gondi GraphQL schema (query surface + type
+  references). Gondi is an NFT lending order book: Collections contain NFTs, which
+  are the collateral for Loans; Offers/Renegotiations propose loan terms and
+  Listings/Orders express sell/trade intent, all owned by Users.
+entities:
+  - name: Collection
+    description: An NFT collection (ERC-721 / ERC-1155), the unit of whitelisting and collection-wide offers.
+    queries: [listCollections, getCollectionBySlug, getCollectionsByContractAddress]
+  - name: Nft
+    description: An individual token within a collection; serves as loan collateral.
+    queries: [listNfts, getNftByContractAddressAndTokenId, getNftBySlugAndTokenId]
+  - name: Loan
+    description: An active or historical loan secured by NFT collateral, with pro-rata interest.
+    queries: [listLoans, getLoanById, listLoanActivities, listLoanEvents]
+  - name: Offer
+    description: A signed loan offer (single-NFT or collection-wide) proposing principal/APR/terms.
+    queries: [listOffers, listNftOffersAndRenegotiations]
+  - name: Renegotiation
+    description: An offer to refinance/renegotiate an existing loan (full, tranche, or trim-the-top).
+    queries: [listRenegotiations]
+  - name: Listing
+    description: An NFT listed for sale, including sell-and-repay while collateralized.
+    queries: [listListings, listListingsForSale, getListingById]
+  - name: Order
+    description: A published trade/buy order (collection, trait, deal, buy-now-pay-later, sell-and-repay).
+    queries: [listOrders, listOrdersV2]
+  - name: User
+    description: A wallet-authenticated account with a profile, linked wallets, and API keys.
+    queries: [me]
+  - name: Artist
+    description: An artist entity associated with collections/editions.
+    queries: [listArtists, getArtist, getArtistBySlug]
+  - name: Edition
+    description: An edition grouping for certain collections.
+    queries: [listEditions, getEditionBySlug]
+relationships:
+  - from: Nft
+    to: Collection
+    kind: belongs_to
+    via: collection
+  - from: Loan
+    to: Nft
+    kind: has_one
+    via: collateral
+  - from: Loan
+    to: Collection
+    kind: belongs_to
+    via: collection
+  - from: Offer
+    to: Collection
+    kind: belongs_to
+    via: collection
+  - from: Offer
+    to: Nft
+    kind: belongs_to
+    via: nft
+  - from: Renegotiation
+    to: Loan
+    kind: belongs_to
+    via: loan
+  - from: Listing
+    to: Nft
+    kind: belongs_to
+    via: nft
+  - from: Order
+    to: Collection
+    kind: belongs_to
+    via: collection
+  - from: Edition
+    to: Collection
+    kind: belongs_to
+    via: collection

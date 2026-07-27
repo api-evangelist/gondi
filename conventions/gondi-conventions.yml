@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: derived
+source: graphql/gondi-schema.graphql
+docs: https://docs.gondi.xyz/
+api_style: graphql
+endpoint: https://api.gondi.xyz/graphql
+authentication:
+  style: siwe-session + api-key
+  ref: authentication/gondi-authentication.yml
+  notes: >-
+    Sign-In With Ethereum (EIP-4361) session, or a programmatic API key minted
+    via createApiKey. Value-moving actions are gated by wallet signatures, not
+    server tokens.
+signing:
+  pattern: generate-to-be-signed / save-signed
+  notes: >-
+    Write flows follow a two-call convention: a generate*ToBeSigned mutation
+    returns the structured payload (offer terms) for the client to sign with its
+    wallet, then a saveSigned* mutation persists the signed payload. This keeps
+    signing client-side and non-custodial.
+pagination:
+  style: connection-like
+  notes: >-
+    List queries (listCollections, listNfts, listLoans, listOffers, listOrders,
+    ...) accept filter/sort/pagination arguments and return list result types.
+    Cursor/limit semantics are defined per query in graphql/gondi-schema.graphql.
+error_envelope:
+  style: graphql-errors
+  notes: >-
+    GraphQL transport-level errors are returned in the top-level `errors[]`
+    array (message + path + extensions) rather than as RFC 9457 problem+json.
+    No REST 4xx/5xx problem catalog applies to this API.
+idempotency:
+  supported: false
+  notes: >-
+    No documented Idempotency-Key header. De-duplication of offers/orders is
+    effectively provided by the signed payload itself (a given signed offer is
+    unique), but the provider publishes no explicit idempotency contract, so no
+    Idempotency pointer is emitted.
+versioning:
+  scheme: protocol-version
+  notes: >-
+    Product/protocol versions (V1, V2, V3, V3.1) are documented at docs.gondi.xyz;
+    the GraphQL schema is a single evolving contract without a version header.
+  ref: lifecycle/gondi-lifecycle.yml
+cross_links:
+  authentication: authentication/gondi-authentication.yml
+  lifecycle: lifecycle/gondi-lifecycle.yml
+  data_model: data-model/gondi-data-model.yml

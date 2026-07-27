@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: derived
+source: graphql/gondi-schema.graphql
+docs: https://docs.gondi.xyz/gondi-v3/security-and-audits
+standards:
+  - id: graphql
+    conforms: true
+    evidence: introspectable GraphQL schema at https://api.gondi.xyz/graphql (76 queries, 48 mutations, 325 types)
+  - id: eip-4361-siwe
+    conforms: true
+    evidence: generateSignInNonce + signInWithEthereum mutations implement Sign-In With Ethereum
+  - id: oauth2
+    conforms: false
+    evidence: no oauth2 security scheme; auth is SIWE session + API key
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: GraphQL top-level errors[] envelope, not application/problem+json
+  - id: erc-721
+    conforms: true
+    evidence: protocol lends against ERC-721 NFT collateral (docs Loan Basics)
+  - id: erc-1155
+    conforms: true
+    evidence: protocol supports ERC-1155 collateral (docs)
+  - id: erc-721c
+    conforms: true
+    evidence: docs "ERC-721C Whitelisting" section
+smart_contract_audits:
+  note: >-
+    Gondi's on-chain protocol contracts are third-party audited (informational
+    security posture, NOT a compliance certification such as SOC 2 / ISO 27001).
+  auditors: [Halborn, CertiK, "Zenith (fka Code4rena)", 0xQuit, Qckhp]
+  docs: https://docs.gondi.xyz/gondi-v3/security-and-audits

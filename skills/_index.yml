@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: generated
+source: graphql/gondi-schema.graphql
+skills:
+  - file: gondi-authenticate.md
+    name: Authenticate to Gondi with Sign-In With Ethereum
+    api: graphql/gondi-schema.graphql
+    operations: [generateSignInNonce, signInWithEthereum, createApiKey]
+  - file: gondi-make-loan-offer.md
+    name: Make a loan offer on Gondi
+    api: graphql/gondi-schema.graphql
+    operations: [generateSingleNftOfferToBeSigned, saveSignedSingleNftOffer, generateCollectionOfferToBeSigned, saveSignedCollectionOffer, listOffers, hideOffer]
+  - file: gondi-refinance-loan.md
+    name: Refinance / renegotiate a Gondi loan
+    api: graphql/gondi-schema.graphql
+    operations: [listLoans, generateRenegotiationOfferToBeSigned, saveRenegotiationSignedOffer]

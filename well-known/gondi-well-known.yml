@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Gondi hosts
+notes: >-
+  Probed the /.well-known/ discovery surface on the API, dApp, and docs hosts.
+  No documents returned 200 — no security.txt, OIDC/OAuth discovery, api-catalog,
+  or ai-plugin.json is published. Absence is valid recorded data; no WellKnown
+  pointer is emitted.
+hosts:
+  - host: https://api.gondi.xyz
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://www.gondi.xyz
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://docs.gondi.xyz
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}

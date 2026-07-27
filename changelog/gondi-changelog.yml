@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/gondixyz/gondi-js/releases
+scheme: semver
+subject: gondi-js SDK
+current_version: 0.30.2
+notes: >-
+  Gondi does not publish a dated product changelog page; the closest public,
+  dated release history is the gondi-js SDK GitHub releases (170+ releases). The
+  on-chain protocol is versioned separately (see lifecycle/gondi-lifecycle.yml).
+entries:
+  - version: 0.30.2
+    date: '2026-07-16'
+    highlights: [chore(gondi-js) untrack examples/.yarn]
+  - version: 0.30.1
+    date: '2026-07-14'
+    highlights: [fix correct the anvil UserVault fallback]
+  - version: 0.30.0
+    date: '2026-07-02'
+    highlights: [chore stop tracking generated docs]
+  - version: 0.29.15
+    date: '2026-06-03'
+    highlights: [allow provided SIWE issuedAt]
+  - version: 0.29.13
+    date: '2026-05-19'
+    highlights: [update purchase bundler address]
+  - version: 0.29.12
+    date: '2026-05-11'
+    highlights: [expose maxSeniorRepayment on make offer]
+  - version: 0.29.11
+    date: '2026-05-04'
+    highlights: [preserve trailing attribution bytes]
+  - version: 0.29.10
+    date: '2026-04-30'
+    highlights: [remove siwe dependency]
+  - version: 0.29.9
+    date: '2026-04-28'
+    highlights: [include variables on api steps]
+  - version: 0.29.8
+    date: '2026-04-21'
+    highlights: [allow multiple trait orders]
+  - version: 0.29.7
+    date: '2026-04-17'
+    highlights: [calculate prorated origination fee]

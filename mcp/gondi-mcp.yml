@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: graphql/gondi-schema.graphql
+notes: >-
+  No official hosted/remote Gondi MCP server was found (docs, npm
+  @modelcontextprotocol, MCP registries). This is a CANDIDATE tool list derived
+  from the Gondi GraphQL API operations (https://api.gondi.xyz/graphql) — a
+  starting point for wrapping the read/discovery surface as MCP tools. Mutations
+  that require wallet signatures (offer/order signing) are intentionally omitted
+  from an unattended tool surface.
+server:
+  name: gondi
+  transport: http
+  endpoint: https://api.gondi.xyz/graphql
+tools:
+  - name: list_collections
+    description: List NFT collections indexed by Gondi.
+    source_operation: graphql/gondi-schema.graphql#Query.listCollections
+  - name: get_collection_by_slug
+    description: Fetch a single collection by slug.
+    source_operation: graphql/gondi-schema.graphql#Query.getCollectionBySlug
+  - name: list_nfts
+    description: List NFTs, with collection/user/trait filters.
+    source_operation: graphql/gondi-schema.graphql#Query.listNfts
+  - name: list_loans
+    description: List loans across the protocol.
+    source_operation: graphql/gondi-schema.graphql#Query.listLoans
+  - name: get_loan_by_id
+    description: Fetch a single loan by id.
+    source_operation: graphql/gondi-schema.graphql#Query.getLoanById
+  - name: list_loan_activities
+    description: List activity events for loans.
+    source_operation: graphql/gondi-schema.graphql#Query.listLoanActivities
+  - name: list_offers
+    description: List loan offers.
+    source_operation: graphql/gondi-schema.graphql#Query.listOffers
+  - name: list_listings
+    description: List NFT listings for sale.
+    source_operation: graphql/gondi-schema.graphql#Query.listListingsForSale
+  - name: list_orders
+    description: List orders (v2).
+    source_operation: graphql/gondi-schema.graphql#Query.listOrdersV2
+  - name: list_renegotiations
+    description: List loan renegotiation offers.
+    source_operation: graphql/gondi-schema.graphql#Query.listRenegotiations
+  - name: global_search
+    description: Search collections, NFTs, and users.
+    source_operation: graphql/gondi-schema.graphql#Query.globalSearchV2
+  - name: get_nft_by_contract_and_token
+    description: Look up an NFT by contract address and token id.
+    source_operation: graphql/gondi-schema.graphql#Query.getNftByContractAddressAndTokenId

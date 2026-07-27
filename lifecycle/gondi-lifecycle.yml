@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gondi.xyz/
+versioning:
+  scheme: protocol-version
+  current: V3.1
+  history: [V1, V2, V3, V3.1]
+  docs: https://docs.gondi.xyz/gondi-v3/introducing-gondi
+  notes: >-
+    Gondi versions the protocol (V1 → V2 → V3 → V3.1), documented as distinct
+    doc trees. The off-chain GraphQL API is a single evolving contract with no
+    version header. V1/V2 remain documented under "Gondi V1 and V2" but new
+    activity targets V3.x.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal RFC 8594 deprecation policy or Sunset header support documented.
+sla:
+  url: null
+  notes: No published SLA/uptime target (decentralized DeFi protocol).
+status_page: null
+security_audits: https://docs.gondi.xyz/gondi-v3/security-and-audits
+deprecated_operations: []

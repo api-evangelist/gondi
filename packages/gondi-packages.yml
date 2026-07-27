@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/gondi
+packages:
+  - language: javascript
+    registry: npm
+    name: gondi
+    url: https://www.npmjs.com/package/gondi
+    install: npm install gondi
+    version: 0.30.2
+    repository: https://github.com/gondixyz/gondi-js
+    license: MIT
+    official: true
+    description: >-
+      Official Gondi TypeScript/JavaScript SDK — a crypto-native lending library
+      to borrow, lend & refinance NFTs. Initialized with a viem wallet client;
+      handles Sign-In With Ethereum and offer/order signing against the Gondi
+      GraphQL API and protocol contracts.
+  - language: python
+    registry: pypi
+    name: gondi
+    url: https://pypi.org/project/gondi/
+    install: pip install gondi
+    version: 0.1.0
+    repository: https://github.com/gondixyz/python-sdk
+    license: MIT
+    official: true
+    description: >-
+      Official Gondi Python SDK (author "Gondi", "Gondi SDK"). Early-stage
+      (0.1.0); the actively maintained, feature-complete client is the
+      JavaScript gondi-js SDK.
